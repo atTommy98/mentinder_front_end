@@ -9,7 +9,7 @@ function MentorForm() {
       <label for="lastName">Last name:</label>
       <input id="lastName"></input>
       <br />
-      <input type="radio" id="mentor" name="role" value="mentor"></input>
+      <input type="radio" id="mentor" name="role" value="mentor" checked="checked"></input>
       <label for="mentor">Mentor</label>
       <input
         type="radio"
@@ -25,8 +25,8 @@ function MentorForm() {
       <label for="company">Company:</label>
       <input id="company"></input>
       <br />
-      <label for="role">Job role:</label>
-      <input id="role"></input>
+      <label for="job">Job role:</label>
+      <input id="job"></input>
       <br />
       <input type="radio" id="male" name="gender" value="male"></input>
       <label for="male">Male</label>
@@ -48,7 +48,7 @@ function MentorForm() {
         name="frontEnd"
         value="frontEnd"
       ></input>
-      <label for="frontEnd">front-end</label>
+      <label for="frontEnd">Front-End</label>
       <br />
       <input
         type="checkbox"
@@ -56,7 +56,7 @@ function MentorForm() {
         name="backEnd"
         value="backEnd"
       ></input>
-      <label for="backEnd">back-end</label>
+      <label for="backEnd">Back-End</label>
       <br />
       <input
         type="checkbox"
@@ -64,15 +64,10 @@ function MentorForm() {
         name="gameDevelopment"
         value="gameDevelopment"
       ></input>
-      <label for="gameDevelopment">game development</label>
+      <label for="gameDevelopment">Game Development</label>
       <br />
-      <input
-        type="checkbox"
-        id="UXdesign"
-        name="UXdesign"
-        value="UXdesign"
-      ></input>
-      <label for="UXdesign">UX / design</label>
+      <input type="checkbox" id="ux" name="ux" value="ux"></input>
+      <label for="ux">UX</label>
       <br />
       <input
         type="checkbox"
@@ -80,7 +75,7 @@ function MentorForm() {
         name="security"
         value="security"
       ></input>
-      <label for="security">security</label>
+      <label for="security">Security</label>
       <br />
       <input
         type="checkbox"
@@ -88,7 +83,7 @@ function MentorForm() {
         name="databases"
         value="databases"
       ></input>
-      <label for="databases">databases</label>
+      <label for="databases">Databases</label>
       <br />
       <input
         type="checkbox"
@@ -96,10 +91,10 @@ function MentorForm() {
         name="projectManagement"
         value="projectManagement"
       ></input>
-      <label for="projectManagement">project management</label>
+      <label for="projectManagement">Project Management</label>
       <br />
-      <input type="checkbox" id="devOps" name="devOps" value="devOps"></input>
-      <label for="devOps">dev-ops</label>
+      <input type="checkbox" id="devops" name="devops" value="devops"></input>
+      <label for="devops">Dev-Ops</label>
       <br />
       <input
         type="checkbox"
@@ -107,7 +102,7 @@ function MentorForm() {
         name="testing"
         value="testing"
       ></input>
-      <label for="testing">testing</label>
+      <label for="testing">Testing</label>
       <br />
       <input
         type="checkbox"
@@ -115,10 +110,57 @@ function MentorForm() {
         name="education"
         value="education"
       ></input>
-      <label for="education">education</label>
+      <label for="education">Education</label>
       <br />
-      <input type="checkbox" id="devOps" name="devOps" value="devOps"></input>
-      <label for="devOps">dev-ops</label>
+      <input
+        type="checkbox"
+        id="finance"
+        name="finance"
+        value="finance"
+      ></input>
+      <label for="finance">Finance</label>
+      <br />
+      <input
+        type="checkbox"
+        id="infrastructure"
+        name="infrastructure"
+        value="infrastructure"
+      ></input>
+      <label for="infrastructure">Infrastructure</label>
+      <br />
+      <p>Please select your hobbies:</p>
+      <input
+        type="checkbox"
+        id="foodAndDrink"
+        name="foodAndDrink"
+        value="foodAndDrink"
+      ></input>
+      <label for="foodAndDrink">Food and Drink</label>
+      <br />
+      <input type="checkbox" id="gaming" name="gaming" value="gaming"></input>
+      <label for="gaming">Gaming</label>
+      <br />
+      <input
+        type="checkbox"
+        id="sportAndFitness"
+        name="sportAndFitness"
+        value="sportAndFitness"
+      ></input>
+      <label for="sportAndFitness">Sport and Fitness</label>
+      <br />
+      <input type="checkbox" id="music" name="music" value="music"></input>
+      <label for="music">Music</label>
+      <br />
+      <input
+        type="checkbox"
+        id="reading"
+        name="reading"
+        value="reading"
+      ></input>
+      <label for="reading">Reading</label>
+      <br />
+      <input type="checkbox" id="films" name="films" value="films"></input>
+      <label for="films">Films</label>
       <br />
     </form>
   );
