@@ -33,7 +33,7 @@ function BootcamperForm() {
 
   function handleSubmit(event) {
     event.preventDefault()
-    console.log(event.target[0])
+    console.log(event)
     setBootcamper({
       firstname: event.target[0].value,
       lastname: event.target[1].value,
@@ -41,26 +41,26 @@ function BootcamperForm() {
       company: "",
       job: "",
       role: "bootcamper",
-      gender: event.target[6].value,
-      bio: event.target[7].value,
-      frontend: event.target[8].checked,
-      backend: event.target[9].checked,
-      gamedev: event.target[10].checked,
-      ux: event.target[11].checked,
-      security: event.target[12].checked,
-      databases: event.target[13].checked,
-      projectmanagement: event.target[14].checked,
-      devops: event.target[15].checked,
-      testing: event.target[16].checked,
-      education: event.target[17].checked,
-      finance: event.target[18].checked,
-      infrastructure: event.target[19].checked,
-      foodanddrink: event.target[20].checked,
-      gaming: event.target[21].checked,
-      sportandfitness: event.target[22].checked,
-      music: event.target[23].checked,
-      reading: event.target[24].checked,
-      films: event.target[25].checked,
+      gender: event.target[3].value,
+      bio: event.target[4].value,
+      frontend: event.target[5].checked,
+      backend: event.target[6].checked,
+      gamedev: event.target[7].checked,
+      ux: event.target[8].checked,
+      security: event.target[9].checked,
+      databases: event.target[10].checked,
+      projectmanagement: event.target[11].checked,
+      devops: event.target[12].checked,
+      testing: event.target[13].checked,
+      education: event.target[14].checked,
+      finance: event.target[15].checked,
+      infrastructure: event.target[16].checked,
+      foodanddrink: event.target[17].checked,
+      gaming: event.target[18].checked,
+      sportandfitness: event.target[19].checked,
+      music: event.target[20].checked,
+      reading: event.target[21].checked,
+      films: event.target[22].checked,
     })
     console.log(bootcamper);
   }
@@ -83,6 +83,8 @@ function BootcamperForm() {
         <option value="Female">Female</option>
         <option value="Male">Male</option>
         <option value="Non-binary">Non-binary</option>
+        <option value="Other">Other</option>
+        <option value="Prefer not to say">Prefer not to say</option>
       </select>
       <br />
       <br />
