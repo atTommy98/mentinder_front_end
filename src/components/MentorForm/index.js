@@ -1,15 +1,22 @@
 import React from "react";
+import "./mentorform.css";
 
 function MentorForm() {
   return (
-    <form>
+    <form className="mentorForm">
       <label for="firstName">First name:</label>
       <input id="firstName"></input>
       <br />
       <label for="lastName">Last name:</label>
       <input id="lastName"></input>
       <br />
-      <input type="radio" id="mentor" name="role" value="mentor" checked="checked"></input>
+      <input
+        type="radio"
+        id="mentor"
+        name="role"
+        value="mentor"
+        checked="checked"
+      ></input>
       <label for="mentor">Mentor</label>
       <input
         type="radio"

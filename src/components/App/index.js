@@ -5,27 +5,16 @@ import Homepage from "../Homepage";
 import Mentor from "../MentorPage";
 import Bootcamper from "../BootcamperPage";
 import Matching from "../MatchingPage";
+import Nav from "../Nav";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/mentor">Mentor Page</Link>
-            </li>
-            <li>
-              <Link to="/bootcamper">Bootcamper Page</Link>
-            </li>
-            <li>
-              <Link to="/match">Match</Link>
-            </li>
-          </ul>
-        </nav>
+        <header>
+          <img src="/socLogo.png"></img>
+          <Nav />
+        </header>
 
         <Switch>
           <Route path="/mentor">

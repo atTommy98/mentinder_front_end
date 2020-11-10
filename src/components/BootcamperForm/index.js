@@ -1,8 +1,9 @@
 import React from "react";
+import "./bootcamperform.css";
 
 function BootcamperForm() {
   return (
-    <form>
+    <form className="bootcamperForm">
       <label for="firstName">First name:</label>
       <input id="firstName"></input>
       <br />
