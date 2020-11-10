@@ -1,0 +1,28 @@
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 70px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.navLink {
+  margin: 30px;
+  margin-top: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+
+.navLink:visited {
+  color: black;
+  text-decoration-line: none;
+}
+
+.navLink:hover {
+  color: #2b7cc0;
+}

@@ -1,12 +1,13 @@
 import React from "react";
 import MentorForm from "../MentorForm";
+import "./mentorpage.css";
 
 function Mentor() {
   return (
-    <div>
-      <h1>Mentor Page</h1>
+    <main className="mainMentor">
+      <h1 className="h1Mentor">Sign up to be a mentor...</h1>
       <MentorForm />
-    </div>
+    </main>
   );
 }
 

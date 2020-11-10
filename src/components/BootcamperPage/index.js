@@ -1,12 +1,13 @@
 import React from "react";
 import BootcamperForm from "../BootcamperForm";
+import "./bootcamperpage.css";
 
 function Bootcamper() {
   return (
-    <div>
-      <h1>Bootcamper</h1>
+    <main className="mainBootcamper">
+      <h1 class="h1Bootcamper">Sign up to find a mentor...</h1>
       <BootcamperForm />
-    </div>
+    </main>
   );
 }
 
