@@ -1,0 +1,46 @@
+img {
+  width: 200px;
+  height: auto;
+  margin: 30px;
+}
+
+@keyframes wobble {
+  0% {
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.shrink {
+  animation: shrink 2s infinite;
+}
+
+.notShrinking {
+  animation: wobble 1s infinite;
+}
+
+@keyframes shrink {
+  0% {
+  }
+  25% {
+    width: 100px;
+  }
+  50% {
+    width: 50px;
+  }
+  75% {
+    width: 100px;
+  }
+  100% {
+  }
+}
