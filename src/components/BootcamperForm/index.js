@@ -1,49 +1,104 @@
-import React from "react";
+import React, { useState } from "react";
 import "./bootcamperform.css";
 
 function BootcamperForm() {
+  const [bootcamper, setBootcamper] = useState({
+    firstname: "",
+    lastname: "",
+    role: "bootcamper",
+    email: "",
+    company: "",
+    job: "",
+    gender: "",
+    bio: "",
+    frontend: null,
+    backend: null,
+    gamedev: null,
+    ux: null,
+    security: null,
+    databases: null,
+    projectmanagement: null,
+    devops: null,
+    testing: null,
+    education: null,
+    finance: null,
+    infrastructure: null,
+    foodanddrink: null,
+    gaming: null,
+    sportandfitness: null,
+    music: null,
+    reading: null,
+    films: null,
+  });
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    console.log(event.target[0])
+    setBootcamper({
+      firstname: event.target[0].value,
+      lastname: event.target[1].value,
+      email: event.target[2].value,
+      company: "",
+      job: "",
+      role: "bootcamper",
+      gender: event.target[6].value,
+      bio: event.target[7].value,
+      frontend: event.target[8].checked,
+      backend: event.target[9].checked,
+      gamedev: event.target[10].checked,
+      ux: event.target[11].checked,
+      security: event.target[12].checked,
+      databases: event.target[13].checked,
+      projectmanagement: event.target[14].checked,
+      devops: event.target[15].checked,
+      testing: event.target[16].checked,
+      education: event.target[17].checked,
+      finance: event.target[18].checked,
+      infrastructure: event.target[19].checked,
+      foodanddrink: event.target[20].checked,
+      gaming: event.target[21].checked,
+      sportandfitness: event.target[22].checked,
+      music: event.target[23].checked,
+      reading: event.target[24].checked,
+      films: event.target[25].checked,
+    })
+    console.log(bootcamper);
+  }
+
+  function sendbootcamper() {
+    console.log(bootcamper);
+    return bootcamper;
+  }
+
   return (
-    <form className="bootcamperForm">
-      <label for="firstName">First name:</label>
-      <input id="firstName"></input>
+    <form className="mentorForm" onSubmit={(e) => handleSubmit(e)}>
+      <input placeholder="First Name" id="firstName"></input>
       <br />
-      <label for="lastName">Last name:</label>
-      <input id="lastName"></input>
+      <input placeholder="Last Name" id="lastName"></input>
       <br />
-      <input type="radio" id="mentor" name="role" value="mentor"></input>
-      <label for="mentor">Mentor</label>
-      <input
-        type="radio"
-        id="bootcamper"
-        name="role"
-        value="bootcamper"
-        checked="checked"
-      ></input>
-      <label for="bootcamper">Bootcamper</label>
+      <input placeholder="E-Mail" id="email"></input>
       <br />
-      <label for="email">Email:</label>
-      <input id="email"></input>
+      <p>What is your gender?</p>
+      <select id="gender-list">
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Non-binary">Non-binary</option>
+      </select>
       <br />
-      <input type="radio" id="male" name="gender" value="male"></input>
-      <label for="male">Male</label>
-      <input type="radio" id="female" name="gender" value="female"></input>
-      <label for="female">Female</label>
-      <input
-        type="radio"
-        id="nonBinary"
-        name="gender"
-        value="nonBinary"
-      ></input>
-      <label for="other">Non-binary</label>
-      <br /> <label for="mentorBio">Short bio:</label>
-      <textarea id="mentorBio" name="mentorBio" rows="4" cols="50"></textarea>
-      <p>Please select your interests:</p>
+      <br />
+      <textarea
+        placeholder="Enter a short bio..."
+        id="mentorBio"
+        name="mentorBio"
+        rows="4"
+        cols="50"
+      ></textarea>
+      <p>Please select your areas of expertise:</p>
       <input
         type="checkbox"
         id="frontEnd"
-        name="frontEnd"
-        value="frontEnd"
-      ></input>
+        name="frontEnd">
+      </input>
       <label for="frontEnd">Front-End</label>
       <br />
       <input
@@ -158,6 +213,10 @@ function BootcamperForm() {
       <input type="checkbox" id="films" name="films" value="films"></input>
       <label for="films">Films</label>
       <br />
+      <input
+        type="submit"
+        value="Submit"
+      ></input>
     </form>
   );
 }
