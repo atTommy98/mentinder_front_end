@@ -2,8 +2,6 @@ import React from "react";
 
 export default function topFiveForm({ topFive, setTopFive, mentorData }) {
   function handleSubmit(e) {
-    e.preventDefault();
-    console.log(e);
     setTopFive({
       firstname: e.target[0].value,
       lastname: e.target[1].value,
@@ -14,9 +12,8 @@ export default function topFiveForm({ topFive, setTopFive, mentorData }) {
       fourthChoice: e.target[6].value,
       fifthChoice: e.target[7].value,
     });
-    console.log(topFive);
   }
-  console.log(mentorData);
+
   return (
     <form className="mentorForm" onSubmit={(e) => handleSubmit(e)}>
       <input placeholder="Enter your first name"></input>

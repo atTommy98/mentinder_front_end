@@ -123,6 +123,22 @@ function App() {
     getAllMentors();
   }, []);
 
+  useEffect(() => {
+    async function postTopFiveData(formData) {
+      console.log(formData);
+      const res = await fetch("http://localhost:5000/mentorsAndBootcampers", {
+        method: "PATCH",
+        headers: { "content-type": "application/JSON" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      console.log(data);
+    }
+    if (topFive.firstname !== "") {
+      postTopFiveData(topFive);
+    }
+  }, [topFive]);
+
   return (
     <Router>
       <div className="App">
