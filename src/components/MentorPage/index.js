@@ -8,13 +8,19 @@ function Mentor({ mentor, setMentor }) {
       <article className="mentorArticle">
         <h1 className="h1Mentor">Why become a mentor?</h1>
         <p className="blurb-p">
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
+          There are lots of great reasons to become a mentor. It is an
+          opportunity to develop key skills such as listening, questioning,
+          facilitation, empathising and rapport building. It may give you the
+          chance to reflect on your own learning and challenge your ways of
+          thinking and old behaviour. It will help you become a better leader as
+          demonstrating patience with those in need of guidance and support,
+          assisting someone in their learning, and helping people figure out the
+          best path forward are all trademarks of a great leader and skills that
+          can be honed through mentoring. It is an opportunity to gain new
+          persepctive and ideas, strengthen lessons you've already learnt, and a
+          chance to give something back to the tech community. You will be
+          shaping leaders of tomorrow and quite possibly changing somebody's
+          life!
         </p>
         <h1 className="h1Mentor">What does being a mentor involve?</h1>
         <p className="blurb-p">
