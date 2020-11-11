@@ -1,0 +1,32 @@
+.card-container {
+  background-color: grey;
+  height: 500px;
+  width: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+}
+
+.image {
+  height: auto;
+  width: 350px;
+}
+
+.card-body {
+    padding: 0px 10px 0px;
+    position: relative;
+}
+
+.card-title {
+    margin: 0px;
+    font-size: 20px;
+}
+
+.card-subtitle {
+ margin-top: 5px;
+ color: rgba(0, 0, 0, 0.5);
+ margin-bottom: 5px;
+}
+
+.card-text {
+    margin: 0px;
+}

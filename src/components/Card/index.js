@@ -1,22 +1,20 @@
 import React, { useState } from "react";
+import "../Card/card.css";
 
 export default function Card({ object }) {
   return (
-    <div className="card">
-      <img className="image" src="anon.png" style={{ width: "100%" }}></img>
-      <div className="information-container">
-        <h4>
+    <div className="card-container">
+      <div>
+        <img className="image" src="anon.png"></img>
+      </div>
+      <div className="card-body">
+        <h5 className="card-title">
           <b>
             {object.firstname} {object.lastname}
           </b>
-        </h4>
-        <p>{object.role}</p>
-        <p>{object.email}</p>
-        <p>{object.company}</p>
-        <p>{object.job}</p>
-        <p>{object.gender}</p>
-        <p>{object.bio}</p>
-        <h4>Professional Interests</h4>
+        </h5>
+        <h6 className="card-subtitle">{object.role}</h6>
+  <p className="card-text">{object.bio}</p>
       </div>
     </div>
   );
