@@ -9,7 +9,16 @@ import Nav from "../Nav";
 
 function App() {
   const [mentorData, setMentorData] = useState([]);
-
+  const [topFive, setTopFive] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    firstChoice: "",
+    secondChoice: "",
+    thirdChoice: "",
+    fourthChoice: "",
+    fifthChoice: "",
+  });
   const [bootcamper, setBootcamper] = useState({
     firstname: "",
     lastname: "",
@@ -127,7 +136,7 @@ function App() {
             <Mentor setMentor={setMentor} mentor={mentor} />
           </Route>
           <Route path="/match">
-            <Matching mentorData={mentorData} />
+            <Matching mentorData={mentorData} setTopFive={setTopFive} topFive={topFive}/>
           </Route>
           <Route path="/bootcamper">
             <Bootcamper setBootcamper={setBootcamper} bootcamper={bootcamper} />
