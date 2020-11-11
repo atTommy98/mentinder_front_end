@@ -3,20 +3,20 @@ import "../Card/card.css";
 // import Flair from "../Flairs/index";
 
 export default function Card({ object }) {
-  const [expertise, setExpertise] = useState([]);
+  // const [expertise, setExpertise] = useState([]);
 
-  function formatPerson(object) {
-    const array = Object.entries(object);
-    let expertiseData = [];
-    array.forEach((item) => {
-      if (item[1] === "true") {
-        return expertiseData.push(item[0]);
-      }
-    });
-    setExpertise(expertiseData);
-    console.log(expertise);
-  }
-  formatPerson(object);
+  // function formatPerson(object) {
+  //   const array = Object.entries(object);
+  //   let expertiseData = [];
+  //   array.forEach((item) => {
+  //     if (item[1] === "true") {
+  //       return expertiseData.push(item[0]);
+  //     }
+  //   });
+  //   setExpertise(expertiseData);
+  //   console.log(expertise);
+  // }
+  // formatPerson(object);
 
   return (
     <div className="card-container">
