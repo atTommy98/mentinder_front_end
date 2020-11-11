@@ -32,8 +32,10 @@ function BootcamperForm() {
   });
 
   function handleSubmit(event) {
+
     event.preventDefault();
     console.log(event);
+
     setBootcamper({
       firstname: event.target[0].value,
       lastname: event.target[1].value,
