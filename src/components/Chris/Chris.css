@@ -1,7 +1,14 @@
+body {
+  background-color: green;
+}
+
 img {
-  width: 200px;
+  width: 300px;
   height: auto;
   margin: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @keyframes wobble {
@@ -22,25 +29,29 @@ img {
 }
 
 .shrink {
-  animation: shrink 2s infinite;
+  animation: move 3s;
+  width: 50px;
+  height: auto;
+  margin: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50vw;
 }
 
 .notShrinking {
-  animation: wobble 1s infinite;
+  animation: wobble 2s infinite;
 }
 
-@keyframes shrink {
+@keyframes move {
   0% {
-  }
-  25% {
-    width: 100px;
-  }
-  50% {
-    width: 50px;
-  }
-  75% {
-    width: 100px;
+    width: 300px;
   }
   100% {
+    width: 50px;
+    top: 0.5em;
+    left: 50vw;
+    padding: 5px;
+    border: 1px double #000;
   }
 }

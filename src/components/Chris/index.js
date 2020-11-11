@@ -13,7 +13,7 @@ function Chris() {
   return (
     <img
       className={isShrinking ? "shrink" : "notShrinking"}
-      src="/chris-hat.png"
+      src="/chris-hat3.png"
     />
   );
 }
