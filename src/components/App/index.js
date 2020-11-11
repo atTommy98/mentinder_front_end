@@ -9,7 +9,16 @@ import Nav from "../Nav";
 
 function App() {
   const [mentorData, setMentorData] = useState([]);
-
+  const [topFive, setTopFive] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    firstChoice: "",
+    secondChoice: "",
+    thirdChoice: "",
+    fourthChoice: "",
+    fifthChoice: "",
+  });
   const [bootcamper, setBootcamper] = useState({
     firstname: "",
     lastname: "",
@@ -114,6 +123,22 @@ function App() {
     getAllMentors();
   }, []);
 
+  useEffect(() => {
+    async function postTopFiveData(formData) {
+      console.log(formData);
+      const res = await fetch("http://localhost:5000/mentorsAndBootcampers", {
+        method: "PATCH",
+        headers: { "content-type": "application/JSON" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      console.log(data);
+    }
+    if (topFive.firstname !== "") {
+      postTopFiveData(topFive);
+    }
+  }, [topFive]);
+
   return (
     <Router>
       <div className="App">
@@ -127,7 +152,7 @@ function App() {
             <Mentor setMentor={setMentor} mentor={mentor} />
           </Route>
           <Route path="/match">
-            <Matching mentorData={mentorData} />
+            <Matching mentorData={mentorData} setTopFive={setTopFive} topFive={topFive}/>
           </Route>
           <Route path="/bootcamper">
             <Bootcamper setBootcamper={setBootcamper} bootcamper={bootcamper} />

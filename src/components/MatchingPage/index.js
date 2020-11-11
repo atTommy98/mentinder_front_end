@@ -1,10 +1,10 @@
 import React from "react";
 
 import "./matchingpage.css";
-
+import TopFiveForm from "../TopFiveForm"
 import Card from "../Card";
 
-function Matching({ mentorData }) {
+function Matching({ mentorData, setTopFive, topFive }) {
   return (
     <main className="mainMatching">
       <h1 className="h1Matching">Find a mentor...</h1>
@@ -18,6 +18,7 @@ function Matching({ mentorData }) {
             );
           })}
         </div>
+        <TopFiveForm setTopFive={setTopFive} topFive={topFive} mentorData={mentorData}/>
       </div>
     </main>
   );
