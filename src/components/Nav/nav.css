@@ -12,14 +12,13 @@ ul {
 .navLink {
   margin: 30px;
   margin-top: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 25px;
   font-weight: bold;
-  color: black;
+  color: #000818;
 }
 
 .navLink:visited {
-  color: black;
+  color: #000818;
   text-decoration-line: none;
 }
 

@@ -1,6 +1,55 @@
 .bootcamperForm {
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 20px;
+  padding: 30px;
   border-radius: 5px;
   margin-bottom: 50px;
+}
+
+label {
+  font-size: 22px;
+}
+
+input {
+  height: 30px;
+  margin: 10px;
+}
+
+#email,
+#firstName,
+#lastName,
+#mentorBio {
+  width: 500px;
+}
+
+#gender {
+  font-size: 18px;
+  text-align: left;
+}
+
+.bootcamper-form-section-p {
+  font-size: 25px;
+  color: #000818;
+  font-weight: bold;
+}
+
+#bootcamperSubmitButton {
+  height: 80px;
+  width: 200px;
+  background-color: #2b7cc0;
+  border: solid 3px #000818;
+  color: #000818;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#bootcamperSubmitButton:hover {
+  transform: scale(1.1);
+}
+
+.bootcamper-button-container {
+  display: flex;
+
+  justify-content: center;
 }
