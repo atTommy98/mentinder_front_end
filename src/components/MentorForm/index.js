@@ -1,36 +1,7 @@
 import React, { useState } from "react";
 import "./mentorform.css";
 
-function MentorForm() {
-  const [mentor, setMentor] = useState({
-    firstname: "",
-    lastname: "",
-    role: "mentor",
-    email: "",
-    company: "",
-    job: "",
-    gender: "",
-    bio: "",
-    frontend: null,
-    backend: null,
-    gamedev: null,
-    ux: null,
-    security: null,
-    databases: null,
-    projectmanagement: null,
-    devops: null,
-    testing: null,
-    education: null,
-    finance: null,
-    infrastructure: null,
-    foodanddrink: null,
-    gaming: null,
-    sportandfitness: null,
-    music: null,
-    reading: null,
-    films: null,
-  });
-
+function MentorForm({ mentor, setMentor }) {
   function handleSubmit(event) {
     event.preventDefault();
     console.log(event.target[0]);
@@ -63,11 +34,6 @@ function MentorForm() {
       films: event.target[24].checked,
     });
     console.log(mentor);
-  }
-
-  function sendMentor() {
-    console.log(mentor);
-    return mentor;
   }
 
   return (

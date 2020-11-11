@@ -1,38 +1,8 @@
 import React, { useState } from "react";
 import "./bootcamperform.css";
 
-function BootcamperForm() {
-  const [bootcamper, setBootcamper] = useState({
-    firstname: "",
-    lastname: "",
-    role: "bootcamper",
-    email: "",
-    company: "",
-    job: "",
-    gender: "",
-    bio: "",
-    frontend: null,
-    backend: null,
-    gamedev: null,
-    ux: null,
-    security: null,
-    databases: null,
-    projectmanagement: null,
-    devops: null,
-    testing: null,
-    education: null,
-    finance: null,
-    infrastructure: null,
-    foodanddrink: null,
-    gaming: null,
-    sportandfitness: null,
-    music: null,
-    reading: null,
-    films: null,
-  });
-
+function BootcamperForm({ bootcamper, setBootcamper }) {
   function handleSubmit(event) {
-
     event.preventDefault();
     console.log(event);
 
@@ -65,11 +35,6 @@ function BootcamperForm() {
       films: event.target[22].checked,
     });
     console.log(bootcamper);
-  }
-
-  function sendbootcamper() {
-    console.log(bootcamper);
-    return bootcamper;
   }
 
   return (
