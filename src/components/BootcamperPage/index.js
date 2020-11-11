@@ -2,7 +2,7 @@ import React from "react";
 import BootcamperForm from "../BootcamperForm";
 import "./bootcamperpage.css";
 
-function Bootcamper() {
+function Bootcamper({ bootcamper, setBootcamper }) {
   return (
     <main className="mainBootcamper">
       <article className="bootcamperArticle">
@@ -24,7 +24,7 @@ function Bootcamper() {
       </article>
       <div className="bootcamper-box-layout">
         <h2 className="h2Bootcamper">Sign up here...</h2>
-        <BootcamperForm />
+        <BootcamperForm bootcamper={bootcamper} setBootcamper={setBootcamper} />
       </div>
     </main>
   );

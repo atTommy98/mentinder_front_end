@@ -2,7 +2,7 @@ import React from "react";
 import MentorForm from "../MentorForm";
 import "./mentorpage.css";
 
-function Mentor() {
+function Mentor({ mentor, setMentor }) {
   return (
     <main className="mainMentor">
       <article className="mentorArticle">
@@ -34,7 +34,7 @@ function Mentor() {
       </article>
       <div className="mentor-box-layout">
         <h2 className="h2Mentor">Sign up here...</h2>
-        <MentorForm />
+        <MentorForm mentor={mentor} setMentor={setMentor} />
       </div>
     </main>
   );
