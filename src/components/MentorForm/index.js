@@ -3,7 +3,6 @@ import "./mentorform.css";
 
 function MentorForm({ mentor, setMentor }) {
   function handleSubmit(event) {
-    event.preventDefault();
     console.log(event.target[0]);
     setMentor({
       firstname: event.target[0].value,

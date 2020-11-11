@@ -3,7 +3,6 @@ import "./bootcamperform.css";
 
 function BootcamperForm({ bootcamper, setBootcamper }) {
   function handleSubmit(event) {
-    event.preventDefault();
     console.log(event);
 
     setBootcamper({
