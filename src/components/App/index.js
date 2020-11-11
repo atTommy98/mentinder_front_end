@@ -6,9 +6,10 @@ import Mentor from "../MentorPage";
 import Bootcamper from "../BootcamperPage";
 import Matching from "../MatchingPage";
 import Nav from "../Nav";
-// import { response } from "../../../../back-end-project-week-pat-the-hair-gang/app";
 
 function App() {
+  const [mentorData, setMentorData] = useState([]);
+
   const [bootcamper, setBootcamper] = useState({
     firstname: "",
     lastname: "",
@@ -68,21 +69,25 @@ function App() {
 
   useEffect(() => {
     console.log("bootcamper useEffect in process");
-    async function postBootcamperData({ bootcamper }) {
+    async function postBootcamperData(bootcamper) {
+      console.log(bootcamper);
       const res = await fetch("http://localhost:5000/mentorsAndBootcampers", {
         method: "POST",
         headers: { "content-type": "application/JSON" },
-        body: JSON.stringify({ bootcamper }),
+        body: JSON.stringify(bootcamper),
       });
       const data = await res.json();
       console.log(data);
     }
-    postBootcamperData(bootcamper);
+    if (bootcamper.firstname !== "") {
+      postBootcamperData(bootcamper);
+    }
   }, [bootcamper]);
 
   useEffect(() => {
     console.log("mentor useEffect in process");
     async function postMentorData(mentor) {
+      console.log(mentor);
       const res = await fetch("http://localhost:5000/mentorsAndBootcampers", {
         method: "POST",
         headers: { "content-type": "application/JSON" },
@@ -91,8 +96,23 @@ function App() {
       const data = await res.json();
       console.log(data);
     }
-    postMentorData(mentor);
+    if (mentor.firstname !== "") {
+      postMentorData(mentor);
+    }
   }, [mentor]);
+
+  useEffect(() => {
+    async function getAllMentors() {
+      const res = await fetch(
+        "http://localhost:5000/mentorsAndBootcampers/mentors"
+      );
+      const object = await res.json();
+      const data = object.payload.rows;
+      setMentorData(data);
+    }
+    console.log(mentorData);
+    getAllMentors();
+  }, []);
 
   return (
     <Router>
@@ -107,7 +127,7 @@ function App() {
             <Mentor setMentor={setMentor} mentor={mentor} />
           </Route>
           <Route path="/match">
-            <Matching />
+            <Matching mentorData={mentorData} />
           </Route>
           <Route path="/bootcamper">
             <Bootcamper setBootcamper={setBootcamper} bootcamper={bootcamper} />
