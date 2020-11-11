@@ -1,7 +1,23 @@
 import React, { useState } from "react";
 import "../Card/card.css";
+// import Flair from "../Flairs/index";
 
 export default function Card({ object }) {
+  // const [expertise, setExpertise] = useState([]);
+
+  // function formatPerson(object) {
+  //   const array = Object.entries(object);
+  //   let expertiseData = [];
+  //   array.forEach((item) => {
+  //     if (item[1] === "true") {
+  //       return expertiseData.push(item[0]);
+  //     }
+  //   });
+  //   setExpertise(expertiseData);
+  //   console.log(expertise);
+  // }
+  // formatPerson(object);
+
   return (
     <div className="card-container">
       <div className="card-inner">
@@ -15,12 +31,21 @@ export default function Card({ object }) {
                 {object.firstname} {object.lastname}
               </b>
             </h5>
-            <h6 className="card-subtitle">{object.role}</h6>
+            <h5 className="card-subtitle">{object.company}</h5>
+            <p>{object.job}</p>
+            {/* <div>
+              {expertise.map((item) => {
+                return <Flair expertise={item} />;
+              })}
+            </div> */}
           </div>
         </div>
 
         <div className="card-back">
-          <p className="card-text">{object.bio}</p>
+          <div className="card-text">
+            <p>{object.bio}</p>
+            <p>{object.email}</p>
+          </div>
         </div>
       </div>
     </div>

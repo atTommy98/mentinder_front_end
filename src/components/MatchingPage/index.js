@@ -12,7 +12,7 @@ function Matching({ mentorData, setTopFive, topFive }) {
         <div className="cards">
           {mentorData.map((object, index) => {
             return (
-              <div classname="col-md-4">
+              <div className="col-md-4">
                 <Card key={index} object={object} />
               </div>
             );
