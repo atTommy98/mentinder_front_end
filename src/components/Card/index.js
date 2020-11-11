@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import "../Card/card.css";
+// import Flair from "../Flairs/index";
 
 export default function Card({ object }) {
+  const [expertise, setExpertise] = useState([]);
+
   function formatPerson(object) {
-    const expertise = Object.keys(object);
-    expertise.map((key) => {
-      if (key === true) {
-        return key;
+    const array = Object.entries(object);
+    let expertiseData = [];
+    array.forEach((item) => {
+      if (item[1] === "true") {
+        return expertiseData.push(item[0]);
       }
     });
+    setExpertise(expertiseData);
     console.log(expertise);
   }
   formatPerson(object);
@@ -28,6 +33,11 @@ export default function Card({ object }) {
             </h5>
             <h5 className="card-subtitle">{object.company}</h5>
             <p>{object.job}</p>
+            {/* <div>
+              {expertise.map((item) => {
+                return <Flair expertise={item} />;
+              })}
+            </div> */}
           </div>
         </div>
 
