@@ -32,7 +32,10 @@ function BootcamperForm() {
   });
 
   function handleSubmit(event) {
-    event.preventDefault()
+
+    event.preventDefault();
+    console.log(event);
+
     setBootcamper({
       firstname: event.target[0].value,
       lastname: event.target[1].value,
@@ -60,7 +63,7 @@ function BootcamperForm() {
       music: event.target[20].checked,
       reading: event.target[21].checked,
       films: event.target[22].checked,
-    })
+    });
     console.log(bootcamper);
   }
 
@@ -70,14 +73,15 @@ function BootcamperForm() {
   }
 
   return (
-    <form className="mentorForm" onSubmit={(e) => handleSubmit(e)}>
+    <form className="bootcamperForm" onSubmit={(e) => handleSubmit(e)}>
+      <p className="bootcamper-form-section-p">Personal Details:</p>
       <input placeholder="First Name" id="firstName"></input>
       <br />
       <input placeholder="Last Name" id="lastName"></input>
       <br />
       <input placeholder="E-Mail" id="email"></input>
       <br />
-      <p>What is your gender?</p>
+      <p id="gender">What is your gender?</p>
       <select id="gender-list">
         <option value="Female">Female</option>
         <option value="Male">Male</option>
@@ -94,12 +98,10 @@ function BootcamperForm() {
         rows="4"
         cols="50"
       ></textarea>
-      <p>Please select your areas of expertise:</p>
-      <input
-        type="checkbox"
-        id="frontEnd"
-        name="frontEnd">
-      </input>
+      <p className="bootcamper-form-section-p">
+        Please select your areas of expertise:
+      </p>
+      <input type="checkbox" id="frontEnd" name="frontEnd"></input>
       <label for="frontEnd">Front-End</label>
       <br />
       <input
@@ -180,7 +182,9 @@ function BootcamperForm() {
       ></input>
       <label for="infrastructure">Infrastructure</label>
       <br />
-      <p>Please select your hobbies:</p>
+      <p className="bootcamper-form-section-p">
+        Please select any other interests:
+      </p>
       <input
         type="checkbox"
         id="foodAndDrink"
@@ -214,10 +218,9 @@ function BootcamperForm() {
       <input type="checkbox" id="films" name="films" value="films"></input>
       <label for="films">Films</label>
       <br />
-      <input
-        type="submit"
-        value="Submit"
-      ></input>
+      <div className="bootcamper-button-container">
+        <input type="submit" value="SUBMIT" id="bootcamperSubmitButton"></input>
+      </div>
     </form>
   );
 }

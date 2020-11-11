@@ -4,3 +4,47 @@
   border-radius: 5px;
   margin-bottom: 50px;
 }
+
+label {
+  font-size: 22px;
+}
+
+input {
+  height: 30px;
+  margin: 10px;
+}
+
+#email,
+#firstName,
+#lastName,
+#mentorBio {
+  width: 500px;
+}
+
+.mentor-form-section-p {
+  font-size: 25px;
+  color: #000818;
+  font-weight: bold;
+}
+
+#mentorSubmitButton {
+  height: 80px;
+  width: 200px;
+  background-color: #2b7cc0;
+  border: solid 3px #000818;
+  color: #000818;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#mentorSubmitButton:hover {
+  transform: scale(1.1);
+}
+
+.mentor-button-container {
+  display: flex;
+
+  justify-content: center;
+}

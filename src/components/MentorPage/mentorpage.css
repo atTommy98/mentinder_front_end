@@ -7,7 +7,30 @@
 }
 
 .h1Mentor {
-  color: white;
+  color: #2b7cc0;
   font-size: 3em;
   margin: 50px;
+}
+
+.h2Mentor {
+  color: #000818;
+  font-size: 3em;
+  margin: 40px;
+  text-align: center;
+}
+
+.mentorArticle {
+  width: 90vw;
+  background-color: #000818;
+  color: white;
+  margin: 30px;
+  padding: 20px;
+  padding-bottom: 50px;
+  border-radius: 5px;
+}
+
+.blurb-p {
+  font-size: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
 }

@@ -32,8 +32,8 @@ function MentorForm() {
   });
 
   function handleSubmit(event) {
-    event.preventDefault()
-    console.log(event.target[0])
+    event.preventDefault();
+    console.log(event.target[0]);
     setMentor({
       firstname: event.target[0].value,
       lastname: event.target[1].value,
@@ -61,7 +61,7 @@ function MentorForm() {
       music: event.target[22].checked,
       reading: event.target[23].checked,
       films: event.target[24].checked,
-    })
+    });
     console.log(mentor);
   }
 
@@ -72,6 +72,7 @@ function MentorForm() {
 
   return (
     <form className="mentorForm" onSubmit={(e) => handleSubmit(e)}>
+      <p className="mentor-form-section-p">Personal Details:</p>
       <input placeholder="First Name" id="firstName"></input>
       <br />
       <input placeholder="Last Name" id="lastName"></input>
@@ -99,12 +100,10 @@ function MentorForm() {
         rows="4"
         cols="50"
       ></textarea>
-      <p>Please select your areas of expertise:</p>
-      <input
-        type="checkbox"
-        id="frontEnd"
-        name="frontEnd">
-      </input>
+      <p className="mentor-form-section-p">
+        Please select your areas of expertise:
+      </p>
+      <input type="checkbox" id="frontEnd" name="frontEnd"></input>
       <label for="frontEnd">Front-End</label>
       <br />
       <input
@@ -185,7 +184,7 @@ function MentorForm() {
       ></input>
       <label for="infrastructure">Infrastructure</label>
       <br />
-      <p>Please select your hobbies:</p>
+      <p className="mentor-form-section-p">Please select your hobbies:</p>
       <input
         type="checkbox"
         id="foodAndDrink"
@@ -219,10 +218,9 @@ function MentorForm() {
       <input type="checkbox" id="films" name="films" value="films"></input>
       <label for="films">Films</label>
       <br />
-      <input
-        type="submit"
-        value="Submit"
-      ></input>
+      <div className="mentor-button-container">
+        <input type="submit" value="Submit" id="mentorSubmitButton"></input>
+      </div>
     </form>
   );
 }
