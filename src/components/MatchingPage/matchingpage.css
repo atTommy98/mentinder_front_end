@@ -11,3 +11,10 @@
   font-size: 3em;
   margin: 50px;
 }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+}
