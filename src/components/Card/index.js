@@ -7,6 +7,7 @@ export default function Card({ object }) {
 
   useEffect(() => {
     function formatPerson(object) {
+      console.log(object);
       const array = Object.entries(object);
       let expertiseData = [];
       array.forEach((item) => {
