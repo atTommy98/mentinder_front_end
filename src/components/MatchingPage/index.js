@@ -26,6 +26,22 @@ function Matching({ mentorData, setTopFive, topFive }) {
     reading: false,
     films: false,
   });
+
+  const filterArray = Object.entries(filter)
+    .filter((item) => {
+      return item[1];
+    })
+    .map((item) => item[0]);
+
+  function filterObject(mentorObject) {
+    if (filterArray.length === 0) {
+      return true;
+    }
+    return filterArray.every((key) => {
+      return mentorObject[key] === "true"
+    })
+  }
+
   return (
     <main className="mainMatching">
       <h1 className="matchingPageName">Find a mentor...</h1>
@@ -34,33 +50,14 @@ function Matching({ mentorData, setTopFive, topFive }) {
           <Filter filter={filter} setFilter={setFilter} />
         </div>
         <div className="cards">
-          {mentorData.filter((mentorObject) => {
-            const mentorArray = Object.entries(mentorObject);
-            const filterArray = Object.entries(filter);
-            console.log(mentorArray);
-            console.log(filterArray);
-            if (
-              filterArray.every((item) => {
-                return item[1] === false;
-              }) === true
-            ) {
-              mentorData.map((object, index) => {
-                console.log("items should be rendering");
-                let render = (
-                  <div className="col-md-4" key={index}>
-                    <Card object={object} />
-                  </div>
-                );
-                return render;
-              });
-            }
-            return;
-
-            // turn mentorObject into an array using Object.entries
-            // if all filter values are false, return true
-            // if any of filter keys are true, check to see if any corresponding key is true in mentorObject
-            //
+          {mentorData.filter(filterObject).map((object, index) => {
+            return (
+              <div className="col-md-4" key={index}>
+                <Card object={object} />
+              </div>
+            );
           })}
+          )
         </div>
         <div>
           <TopFiveForm
