@@ -3,7 +3,7 @@
   height: 600px;
   width: 350px;
 
-  /* border: 1px solid black; */
+  border: 10px solid #2b7cc0;
   perspective: 1000px;
   margin: 30px;
   color: white;
@@ -44,6 +44,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 30px;
 }
 
 #profile-image {
@@ -58,17 +59,24 @@
 }
 
 .card-title {
-  margin: 0px;
-  font-size: 20px;
+  font-size: 30px;
   color: white;
-  padding-top: 10px;
+  text-align: center;
+  margin: 5px;
 }
 
 .card-subtitle {
-  margin-top: 5px;
-  color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 5px;
-  color: white;
+  margin: 10px;
+  color: #31986a;
+  font-size: 20px;
+}
+
+.jobTitle,
+.backText {
+  font-size: 19px;
+  margin: 5px;
+  margin-bottom: 20px;
+  font-weight: normal;
 }
 
 .card-text {

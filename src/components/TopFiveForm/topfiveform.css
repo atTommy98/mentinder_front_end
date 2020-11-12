@@ -1,13 +1,44 @@
-.mentorForm {
-  margin: 30px;
+.topFiveForm {
+  margin: 40px;
   padding: 20px;
+  width: 1100px;
+  background-color: rgba(49, 152, 106, 0.8);
+  border-radius: 5px;
 }
 
 .dropdown-container {
   display: flex;
   justify-content: space-evenly;
+  width: 1100px;
 }
 
 .personal-details-container {
   display: flex;
+  width: 1100px;
+  margin-bottom: 20px;
+}
+
+.select-form-title {
+  color: #000818;
+}
+
+.number {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.choiceSubmitButton {
+  height: 40px;
+  width: 200px;
+  background-color: #2b7cc0;
+  border: solid 3px #000818;
+  color: #000818;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.choiceSubmitButton:hover {
+  transform: scale(1.1);
 }
