@@ -18,12 +18,12 @@ function Matching({ mentorData, setTopFive, topFive }) {
             );
           })}
         </div>
-        <TopFiveForm
-          setTopFive={setTopFive}
-          topFive={topFive}
-          mentorData={mentorData}
-        />
       </div>
+      <TopFiveForm
+        setTopFive={setTopFive}
+        topFive={topFive}
+        mentorData={mentorData}
+      />
     </main>
   );
 }
