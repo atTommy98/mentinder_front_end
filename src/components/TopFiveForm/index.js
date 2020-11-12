@@ -1,4 +1,5 @@
 import React from "react";
+import "./topfiveform.css";
 
 export default function topFiveForm({ topFive, setTopFive, mentorData }) {
   function handleSubmit(e) {
@@ -16,43 +17,50 @@ export default function topFiveForm({ topFive, setTopFive, mentorData }) {
 
   return (
     <form className="mentorForm" onSubmit={(e) => handleSubmit(e)}>
-      <input placeholder="Enter your first name"></input>
-      <br />
-      <input placeholder="Enter your second name"></input>
-      <br />
-      <input placeholder="Enter your email name"></input>
-      <br />
-      <p>1.</p>
-      <select id="mentor-choice1">
-        {mentorData.map((item) => {
-          return <option>{`${item.firstname} ${item.lastname}`}</option>;
-        })}
-      </select>
-      <p>2.</p>
-      <select id="mentor-choice2">
-        {mentorData.map((item) => {
-          return <option>{`${item.firstname} ${item.lastname}`}</option>;
-        })}
-      </select>
-      <p>3.</p>
-      <select id="mentor-choice3">
-        {mentorData.map((item) => {
-          return <option>{`${item.firstname} ${item.lastname}`}</option>;
-        })}
-      </select>
-      <p>4.</p>
-      <select id="mentor-choice4">
-        {mentorData.map((item) => {
-          return <option>{`${item.firstname} ${item.lastname}`}</option>;
-        })}
-      </select>
-      <p>5.</p>
-      <select id="mentor-choice5">
-        {mentorData.map((item) => {
-          return <option>{`${item.firstname} ${item.lastname}`}</option>;
-        })}
-      </select>
-      <input type="submit" value="Submit"></input>
+      <h2 className="form-title">
+        Bootcampers, select your top choice mentors...
+      </h2>
+      <div className="personal-details-container">
+        <input placeholder="Bootcamper first name"></input>
+        <br />
+        <input placeholder="Bootcamper second name"></input>
+        <br />
+        <input placeholder="Bootcamper email address"></input>
+        <br />
+      </div>
+      <div className="dropdown-container">
+        <p>1.</p>
+        <select id="mentor-choice1">
+          {mentorData.map((item) => {
+            return <option>{`${item.firstname} ${item.lastname}`}</option>;
+          })}
+        </select>
+        <p>2.</p>
+        <select id="mentor-choice2">
+          {mentorData.map((item) => {
+            return <option>{`${item.firstname} ${item.lastname}`}</option>;
+          })}
+        </select>
+        <p>3.</p>
+        <select id="mentor-choice3">
+          {mentorData.map((item) => {
+            return <option>{`${item.firstname} ${item.lastname}`}</option>;
+          })}
+        </select>
+        <p>4.</p>
+        <select id="mentor-choice4">
+          {mentorData.map((item) => {
+            return <option>{`${item.firstname} ${item.lastname}`}</option>;
+          })}
+        </select>
+        <p>5.</p>
+        <select id="mentor-choice5">
+          {mentorData.map((item) => {
+            return <option>{`${item.firstname} ${item.lastname}`}</option>;
+          })}
+        </select>
+        <input type="submit" value="Submit"></input>
+      </div>
     </form>
   );
 }

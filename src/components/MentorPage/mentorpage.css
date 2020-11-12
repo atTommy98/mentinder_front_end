@@ -15,10 +15,12 @@
 }
 
 .h2Mentor {
-  color: #000818;
+  color: white;
   font-size: 3em;
   margin: 40px;
   text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #31986a;
 }
 
 .mentorArticle {
@@ -36,4 +38,12 @@
   font-size: 25px;
   margin-left: 50px;
   margin-right: 50px;
+}
+
+.mentorPageName {
+  color: white;
+  font-size: 100px;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-color: #31986a;
 }

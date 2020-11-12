@@ -63,7 +63,7 @@ function BootcamperForm({ bootcamper, setBootcamper }) {
         cols="50"
       ></textarea>
       <p className="bootcamper-form-section-p">
-        Please select your areas of expertise:
+        Please select possible areas of interest:
       </p>
       <input type="checkbox" id="frontEnd" name="frontEnd"></input>
       <label for="frontEnd">Front-End</label>

@@ -5,6 +5,7 @@ import "./bootcamperpage.css";
 function Bootcamper({ bootcamper, setBootcamper }) {
   return (
     <main className="mainBootcamper">
+      <h1 className="bootcamperPageName">Bootcampers</h1>
       <article className="bootcamperArticle">
         <h1 className="h1Bootcamper">Why would you want a mentor?</h1>
         <p className="blurb-p">

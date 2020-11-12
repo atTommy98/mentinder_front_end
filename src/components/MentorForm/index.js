@@ -183,7 +183,7 @@ function MentorForm({ mentor, setMentor }) {
       <label for="films">Films</label>
       <br />
       <div className="mentor-button-container">
-        <input type="submit" value="Submit" id="mentorSubmitButton"></input>
+        <input type="submit" value="SUBMIT" id="mentorSubmitButton"></input>
       </div>
     </form>
   );

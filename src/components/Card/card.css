@@ -5,6 +5,7 @@
 
   /* border: 1px solid black; */
   perspective: 1000px;
+  margin: 30px;
 }
 
 .card-inner {
@@ -39,6 +40,10 @@
   background-color: grey;
   color: white;
   transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
