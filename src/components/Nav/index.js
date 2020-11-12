@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink as Link } from "react-router-dom";
 import "./nav.css";
 
 function Nav() {
@@ -15,6 +15,7 @@ function Nav() {
           <Link
             to="/mentor"
             className="navLink"
+            activeClassName="activeLink"
             style={{ textDecoration: "none" }}
           >
             Mentors
@@ -24,6 +25,7 @@ function Nav() {
           <Link
             to="/bootcamper"
             className="navLink"
+            activeClassName="activeLink"
             style={{ textDecoration: "none" }}
           >
             Bootcampers
@@ -33,6 +35,7 @@ function Nav() {
           <Link
             to="/match"
             className="navLink"
+            activeClassName="activeLink"
             style={{ textDecoration: "none" }}
           >
             Find A Mentor

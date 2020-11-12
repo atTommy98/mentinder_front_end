@@ -5,6 +5,7 @@ import "./mentorpage.css";
 function Mentor({ mentor, setMentor }) {
   return (
     <main className="mainMentor">
+      <h1 className="mentorPageName">Mentors</h1>
       <article className="mentorArticle">
         <h1 className="h1Mentor">Why become a mentor?</h1>
         <p className="blurb-p">
@@ -12,8 +13,8 @@ function Mentor({ mentor, setMentor }) {
           opportunity to develop key skills such as listening, questioning,
           facilitation, empathising and rapport building. It may give you the
           chance to reflect on your own learning and challenge your ways of
-          thinking and old behaviour. It will help you become a better leader as
-          demonstrating patience with those in need of guidance and support,
+          thinking and old behaviour. It could help you become a better leader
+          as demonstrating patience with those in need of guidance and support,
           assisting someone in their learning, and helping people figure out the
           best path forward are all trademarks of a great leader and skills that
           can be honed through mentoring. It is an opportunity to gain new

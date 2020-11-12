@@ -17,11 +17,10 @@ ul {
   color: #000818;
 }
 
-.navLink:visited {
-  color: #000818;
-  text-decoration-line: none;
+.navLink:hover {
+  color: #2b7cc0;
 }
 
-.navLink:hover {
+.activeLink {
   color: #2b7cc0;
 }

@@ -1,0 +1,13 @@
+.mentorForm {
+  margin: 30px;
+  padding: 20px;
+}
+
+.dropdown-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.personal-details-container {
+  display: flex;
+}
