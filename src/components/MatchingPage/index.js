@@ -34,18 +34,32 @@ function Matching({ mentorData, setTopFive, topFive }) {
           <Filter filter={filter} setFilter={setFilter} />
         </div>
         <div className="cards">
-          {mentorData.map((object, index) => {
-            {
-              /* const array = Object.entries(object);
-            array.forEach((item) => {
-              if(item[1] === "true" && filter)
-            }) */
+          {mentorData.filter((mentorObject) => {
+            const mentorArray = Object.entries(mentorObject);
+            const filterArray = Object.entries(filter);
+            console.log(mentorArray);
+            console.log(filterArray);
+            if (
+              filterArray.every((item) => {
+                return item[1] === false;
+              }) === true
+            ) {
+              mentorData.map((object, index) => {
+                console.log("items should be rendering");
+                let render = (
+                  <div className="col-md-4" key={index}>
+                    <Card object={object} />
+                  </div>
+                );
+                return render;
+              });
             }
-            return (
-              <div className="col-md-4" key={index}>
-                <Card object={object} />
-              </div>
-            );
+            return;
+
+            // turn mentorObject into an array using Object.entries
+            // if all filter values are false, return true
+            // if any of filter keys are true, check to see if any corresponding key is true in mentorObject
+            //
           })}
         </div>
         <div>
