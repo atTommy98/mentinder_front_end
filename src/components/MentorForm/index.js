@@ -3,6 +3,8 @@ import "./mentorform.css";
 
 function MentorForm({ mentor, setMentor }) {
   function handleSubmit(event) {
+    event.preventDefault()
+    console.log(event);
     setMentor({
       firstname: event.target[0].value,
       lastname: event.target[1].value,
@@ -10,26 +12,27 @@ function MentorForm({ mentor, setMentor }) {
       company: event.target[3].value,
       job: event.target[4].value,
       role: "mentor",
-      gender: event.target[5].value,
-      bio: event.target[6].value,
-      frontend: event.target[7].checked,
-      backend: event.target[8].checked,
-      gamedev: event.target[9].checked,
-      ux: event.target[10].checked,
-      security: event.target[11].checked,
-      databases: event.target[12].checked,
-      projectmanagement: event.target[13].checked,
-      devops: event.target[14].checked,
-      testing: event.target[15].checked,
-      education: event.target[16].checked,
-      finance: event.target[17].checked,
-      infrastructure: event.target[18].checked,
-      foodanddrink: event.target[19].checked,
-      gaming: event.target[20].checked,
-      sportandfitness: event.target[21].checked,
-      music: event.target[22].checked,
-      reading: event.target[23].checked,
-      films: event.target[24].checked,
+      imgurl: event.target[5].value,
+      gender: event.target[6].value,
+      bio: event.target[7].value,
+      frontend: event.target[8].checked,
+      backend: event.target[9].checked,
+      gamedev: event.target[10].checked,
+      ux: event.target[11].checked,
+      security: event.target[12].checked,
+      databases: event.target[13].checked,
+      projectmanagement: event.target[14].checked,
+      devops: event.target[15].checked,
+      testing: event.target[16].checked,
+      education: event.target[17].checked,
+      finance: event.target[18].checked,
+      infrastructure: event.target[19].checked,
+      foodanddrink: event.target[20].checked,
+      gaming: event.target[21].checked,
+      sportandfitness: event.target[22].checked,
+      music: event.target[23].checked,
+      reading: event.target[24].checked,
+      films: event.target[25].checked,
     });
     console.log(mentor);
   }
@@ -46,6 +49,8 @@ function MentorForm({ mentor, setMentor }) {
       <input placeholder="Company" id="company"></input>
       <br />
       <input placeholder="Job" id="job"></input>
+      <br/>
+      <input placeholder="Enter an image URL location" id="imgurl" name="imgurl"></input>
       <br />
       <p>What is your gender?</p>
       <select id="gender-list">

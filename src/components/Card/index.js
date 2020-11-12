@@ -24,7 +24,9 @@ export default function Card({ object }) {
       <div className="card-inner">
         <div className="card-front">
           <div>
-            <img className="image" src="anon.png" alt="profile picture"></img>
+
+            <img id="profile-image" className="image" src={object.imgurl} alt="profile picture"></img>
+           
           </div>
           <div className="card-body">
             <h5 className="card-title">
