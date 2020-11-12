@@ -33,23 +33,25 @@ img {
   width: 100px;
   height: auto;
   margin: 30px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+  top: 40px;
+  left: 500px;
 }
 
 .notShrinking {
-  animation: wobble 2s infinite;
+  animation: wobble 1s infinite;
 }
 
 @keyframes move {
   0% {
     width: 300px;
+    left: 40px;
   }
   100% {
     width: 100px;
-    top: 0.5em;
-    left: 0.5em;
     padding: 5px;
+    position: relative;
+    top: 40px;
+    left: 500px;
   }
 }
