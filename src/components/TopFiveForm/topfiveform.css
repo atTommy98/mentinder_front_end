@@ -11,3 +11,78 @@
 .personal-details-container {
   display: flex;
 }
+
+.chrisImage1 {
+  width: 100px;
+  height: auto;
+  margin: 0;
+}
+
+.chrisImage2 {
+  width: 100px;
+  height: auto;
+  margin: 0;
+  animation: move2 1s;
+}
+
+.chrisImage3 {
+  width: 100px;
+  height: auto;
+  margin: 0;
+  animation: move3 1s;
+}
+
+.chrisImage4 {
+  width: 100px;
+  height: auto;
+  margin: 0;
+  animation: move4 1s;
+}
+
+.chrisImage5 {
+  width: 100px;
+  height: auto;
+  margin: 0;
+  animation: move5 1s;
+}
+
+.noChrisImage {
+  display: none;
+  margin: 0;
+}
+
+@keyframes move2 {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes move3 {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes move4 {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes move5 {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
