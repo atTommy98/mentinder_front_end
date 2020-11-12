@@ -38,8 +38,8 @@ function Matching({ mentorData, setTopFive, topFive }) {
       return true;
     }
     return filterArray.every((key) => {
-      return mentorObject[key] === "true"
-    })
+      return mentorObject[key] === "true";
+    });
   }
 
   return (
@@ -57,14 +57,6 @@ function Matching({ mentorData, setTopFive, topFive }) {
               </div>
             );
           })}
-          )
-        </div>
-        <div>
-          <TopFiveForm
-            setTopFive={setTopFive}
-            topFive={topFive}
-            mentorData={mentorData}
-          />
         </div>
       </div>
       <TopFiveForm
