@@ -1,7 +1,11 @@
 import React from "react";
 import "./topfiveform.css";
+import useSound from "use-sound";
+import nice from "./nice-best-[AudioTrimmer.com].mp3";
+import makeSense from "./make-sense-[AudioTrimmer.com].mp3";
+import perfect from "./perfect2-[AudioTrimmer.com].mp3";
 
-export default function topFiveForm({ topFive, setTopFive, mentorData }) {
+export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
   function handleSubmit(e) {
     setTopFive({
       firstname: e.target[0].value,
@@ -14,6 +18,10 @@ export default function topFiveForm({ topFive, setTopFive, mentorData }) {
       fifthChoice: e.target[7].value,
     });
   }
+
+  const [chrisEffect1] = useSound(nice);
+  const [chrisEffect2] = useSound(perfect);
+  const [chrisEffect3] = useSound(makeSense);
 
   return (
     <form className="mentorForm" onSubmit={(e) => handleSubmit(e)}>
@@ -30,19 +38,19 @@ export default function topFiveForm({ topFive, setTopFive, mentorData }) {
       </div>
       <div className="dropdown-container">
         <p>1.</p>
-        <select id="mentor-choice1">
+        <select onChange={chrisEffect1} id="mentor-choice1">
           {mentorData.map((item) => {
             return <option>{`${item.firstname} ${item.lastname}`}</option>;
           })}
         </select>
         <p>2.</p>
-        <select id="mentor-choice2">
+        <select onChange={chrisEffect2} id="mentor-choice2">
           {mentorData.map((item) => {
             return <option>{`${item.firstname} ${item.lastname}`}</option>;
           })}
         </select>
         <p>3.</p>
-        <select id="mentor-choice3">
+        <select onChange={chrisEffect3} id="mentor-choice3">
           {mentorData.map((item) => {
             return <option>{`${item.firstname} ${item.lastname}`}</option>;
           })}
