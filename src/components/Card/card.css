@@ -46,9 +46,10 @@
   align-items: center;
 }
 
-.image {
-  height: auto;
+#profile-image {
+  height: 300px;
   width: 350px;
+  object-fit: cover;
 }
 
 .card-body {

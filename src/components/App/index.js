@@ -55,6 +55,7 @@ function App() {
     company: "",
     job: "",
     gender: "",
+    imgurl: "",
     bio: "",
     frontend: null,
     backend: null,
