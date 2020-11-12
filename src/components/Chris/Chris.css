@@ -1,0 +1,55 @@
+body {
+  background-color: green;
+}
+
+img {
+  width: 300px;
+  height: auto;
+  margin: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes wobble {
+  0% {
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.shrink {
+  animation: move 3s;
+  width: 100px;
+  height: auto;
+  margin: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.notShrinking {
+  animation: wobble 2s infinite;
+}
+
+@keyframes move {
+  0% {
+    width: 300px;
+  }
+  100% {
+    width: 100px;
+    top: 0.5em;
+    left: 0.5em;
+    padding: 5px;
+  }
+}
