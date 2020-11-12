@@ -30,13 +30,12 @@ img {
 
 .shrink {
   animation: move 3s;
-  width: 50px;
+  width: 100px;
   height: auto;
   margin: 30px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  left: 50vw;
 }
 
 .notShrinking {
@@ -48,10 +47,9 @@ img {
     width: 300px;
   }
   100% {
-    width: 50px;
+    width: 100px;
     top: 0.5em;
-    left: 50vw;
+    left: 0.5em;
     padding: 5px;
-    border: 1px double #000;
   }
 }

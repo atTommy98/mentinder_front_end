@@ -11,10 +11,12 @@ function Chris() {
   });
 
   return (
-    <img
-      className={isShrinking ? "shrink" : "notShrinking"}
-      src="/chris-hat3.png"
-    />
+    <div>
+      <img
+        className={isShrinking ? "shrink" : "notShrinking"}
+        src="/chris-hat3.png"
+      />
+    </div>
   );
 }
 
