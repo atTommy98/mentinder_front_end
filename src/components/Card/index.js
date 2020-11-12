@@ -24,7 +24,9 @@ export default function Card({ object }) {
       <div className="card-inner">
         <div className="card-front">
           <div>
-            <img id="profile-image" className="image" src={object.imgurl}></img>
+
+            <img id="profile-image" className="image" src={object.imgurl} alt="profile picture"></img>
+           
           </div>
           <div className="card-body">
             <h5 className="card-title">
@@ -32,9 +34,9 @@ export default function Card({ object }) {
                 {object.firstname} {object.lastname}
               </b>
             </h5>
-            <h5 className="card-subtitle">{object.company}</h5>
+            <h4 className="card-subtitle">{object.company}</h4>
             <p>{object.job}</p>
-            <div>
+            <div className="flair-grid">
               {expertise.map((item) => {
                 return <Flair expertise={item} />;
               })}
@@ -44,8 +46,10 @@ export default function Card({ object }) {
 
         <div className="card-back">
           <div className="card-text">
+            <h3>Bio</h3>
             <p>{object.bio}</p>
-            <p>{object.email}</p>
+
+            <h4>{object.email}</h4>
           </div>
         </div>
       </div>
