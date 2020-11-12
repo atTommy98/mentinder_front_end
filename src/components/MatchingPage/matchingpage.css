@@ -23,3 +23,15 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.filterAndCardContainer {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  width: 100vw;
+}
+
+/* .filter-container {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+} */
