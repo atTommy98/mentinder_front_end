@@ -1,28 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./filter.css";
 
-export default function Filter() {
-  const [filter, setFilter] = useState({
-    frontend: false,
-    backend: false,
-    gamedev: false,
-    ux: false,
-    security: false,
-    databases: false,
-    projectmanagement: false,
-    devops: false,
-    testing: false,
-    education: false,
-    finance: false,
-    infrastructure: false,
-    foodanddrink: false,
-    gaming: false,
-    sportandfitness: false,
-    music: false,
-    reading: false,
-    films: false,
-  });
-
+export default function Filter({ filter, setFilter }) {
   return (
     <div className="filter-container">
       <input
