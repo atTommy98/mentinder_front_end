@@ -6,14 +6,11 @@ import Card from "../Card";
 import Chris from "../Chris";
 
 function Matching({ mentorData, setTopFive, topFive }) {
-  const [chris, setChris] = useState(false);
-
   return (
     <main className="mainMatching">
       <h1 className="matchingPageName">Find a mentor...</h1>
-      {chris === true && <Chris />}
+      <Chris />
       <div>
-        <button onClick={() => setChris(true)}>See Chris</button>
         <div className="cards">
           {mentorData.map((object, index) => {
             return (

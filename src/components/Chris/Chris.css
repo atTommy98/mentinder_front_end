@@ -2,15 +2,6 @@ body {
   background-color: green;
 }
 
-img {
-  width: 300px;
-  height: auto;
-  margin: 30px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 @keyframes wobble {
   0% {
   }
@@ -28,39 +19,31 @@ img {
   }
 }
 
+.first {
+  animation: wobble 2s infinite;
+  width: 300px;
+  height: auto;
+  margin: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .second {
   animation: move 3s;
   width: 150px;
-  height: auto;
-  margin: 30px;
   position: relative;
-  top: 40px;
-  left: 550px;
-}
-
-.first {
-  animation: wobble 2s infinite;
-}
-
-.third {
-  width: 150px;
-  height: auto;
-  margin: 30px;
-  position: fixed;
-  top: 40px;
-  right: 0px;
+  left: -600px;
 }
 
 @keyframes move {
   0% {
+    transform: translateX(40vw);
     width: 300px;
-    left: 40px;
   }
   100% {
+    transform: translateX(0px);
+    left: -600px;
     width: 150px;
-    padding: 5px;
-    position: relative;
-    top: 40px;
-    left: 550px;
   }
 }
