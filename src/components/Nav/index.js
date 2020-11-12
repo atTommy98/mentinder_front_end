@@ -41,6 +41,16 @@ function Nav() {
             Find A Mentor
           </Link>
         </li>
+        <li>
+          <Link
+            to="/choices"
+            className="navLink"
+            activeClassName="activeLink"
+            style={{ textDecoration: "none" }}
+          >
+            Bootcamper Choices
+          </Link>
+        </li>
       </ul>
     </nav>
   );

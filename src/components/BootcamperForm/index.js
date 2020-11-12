@@ -4,7 +4,6 @@ import "./bootcamperform.css";
 function BootcamperForm({ bootcamper, setBootcamper }) {
   function handleSubmit(event) {
     console.log(event);
-
     setBootcamper({
       firstname: event.target[0].value,
       lastname: event.target[1].value,

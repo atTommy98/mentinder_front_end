@@ -5,6 +5,7 @@ import TopFiveForm from "../TopFiveForm";
 import Card from "../Card";
 
 function Matching({ mentorData, setTopFive, topFive }) {
+  console.log(mentorData);
   return (
     <main className="mainMatching">
       <h1 className="matchingPageName">Find a mentor...</h1>

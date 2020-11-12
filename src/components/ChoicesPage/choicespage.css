@@ -1,0 +1,24 @@
+.mainChoices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  /* background-color: #31986a; */
+  background-image: url("../Homepage/SoCstars.png");
+  background-position: left;
+}
+
+.choicesPageName {
+  color: white;
+  font-size: 100px;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-color: #31986a;
+}
+
+.bootcamper-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}

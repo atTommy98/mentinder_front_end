@@ -1,0 +1,12 @@
+.choice {
+  font-weight: bold;
+  font-size: smaller;
+  color: white;
+  border-color: black;
+  border: 1px solid;
+  margin: 7px;
+  padding: 5px;
+  padding-top: 3px;
+  border-radius: 8px;
+  background-color: #2b7cc0;
+}
