@@ -1,9 +1,23 @@
-.flair {
+.professional-flair {
   font-weight: bold;
   color: white;
   border-color: black;
   border: 1px solid;
-  margin: 10px;
+  margin: 7px;
   padding: 5px;
+  padding-top: 3px;
   border-radius: 8px;
+  background-color: #2b7cc0;
+}
+
+.hobbies-flair {
+  font-weight: bold;
+  color: white;
+  border-color: black;
+  border: 1px solid;
+  margin: 7px;
+  padding: 5px;
+  padding-top: 3px;
+  border-radius: 8px;
+  background-color: #31986a;
 }

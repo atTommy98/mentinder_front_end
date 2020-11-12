@@ -60,6 +60,7 @@
   margin: 0px;
   font-size: 20px;
   color: white;
+  padding-top: 10px;
 }
 
 .card-subtitle {
@@ -73,14 +74,14 @@
   margin: 5px;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .flair-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-auto-rows: auto;
-  grid-gap: 0.5 rem;
-  justify-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
