@@ -45,10 +45,9 @@ function Matching({ mentorData, setTopFive, topFive }) {
   return (
     <main className="mainMatching">
       <h1 className="matchingPageName">Find a mentor...</h1>
-      <div>
-        <div>
-          <Filter filter={filter} setFilter={setFilter} />
-        </div>
+      <div className="filterAndCardContainer">
+        <Filter filter={filter} setFilter={setFilter} />
+
         <div className="cards">
           {mentorData.filter(filterObject).map((object, index) => {
             return (

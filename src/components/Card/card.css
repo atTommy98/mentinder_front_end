@@ -3,10 +3,11 @@
   height: 600px;
   width: 350px;
 
-  border: 10px solid #2b7cc0;
+  /* border: 10px solid #2b7cc0; */
   perspective: 1000px;
   margin: 30px;
   color: white;
+  padding: 15px;
 }
 
 .card-inner {
@@ -16,6 +17,7 @@
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  transform-origin: center center;
 }
 
 .card-container:hover .card-inner {
@@ -30,6 +32,7 @@
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .card-front {
