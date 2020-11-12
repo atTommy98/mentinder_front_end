@@ -6,7 +6,6 @@ import makeSense from "./make-sense-[AudioTrimmer.com].mp3";
 import perfect from "./perfect2-[AudioTrimmer.com].mp3";
 import cool from "./cool best-[AudioTrimmer.com].mp3";
 import sweet from "./sweet-[AudioTrimmer.com].mp3";
-import Chris from "../Chris";
 
 const initialChrisState = {
   chris1: false,
@@ -69,6 +68,7 @@ export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
               return <option>{`${item.firstname} ${item.lastname}`}</option>;
             })}
           </select>
+          <br></br>
           <img
             className={showChris.chris1 ? "chrisImage1" : "noChrisImage"}
             src="/chris-hat3.png"
@@ -87,6 +87,7 @@ export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
               return <option>{`${item.firstname} ${item.lastname}`}</option>;
             })}
           </select>
+          <br></br>
           <img
             className={showChris.chris2 ? "chrisImage2" : "noChrisImage"}
             src="/chris-hat3.png"
@@ -105,6 +106,7 @@ export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
               return <option>{`${item.firstname} ${item.lastname}`}</option>;
             })}
           </select>
+          <br></br>
           <img
             className={showChris.chris3 ? "chrisImage3" : "noChrisImage"}
             src="/chris-hat3.png"
@@ -123,6 +125,7 @@ export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
               return <option>{`${item.firstname} ${item.lastname}`}</option>;
             })}
           </select>
+          <br></br>
           <img
             className={showChris.chris4 ? "chrisImage4" : "noChrisImage"}
             src="/chris-hat3.png"
@@ -141,6 +144,7 @@ export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
               return <option>{`${item.firstname} ${item.lastname}`}</option>;
             })}
           </select>
+          <br></br>
           <img
             className={showChris.chris5 ? "chrisImage5" : "noChrisImage"}
             src="/chris-hat3.png"

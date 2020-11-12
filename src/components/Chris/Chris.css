@@ -47,3 +47,10 @@ body {
     width: 150px;
   }
 }
+
+#fixed {
+  position: fixed;
+  width: 150px;
+  left: 10px;
+  bottom: 400px;
+}
