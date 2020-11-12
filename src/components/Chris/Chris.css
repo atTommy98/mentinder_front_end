@@ -28,18 +28,27 @@ img {
   }
 }
 
-.shrink {
+.second {
   animation: move 3s;
-  width: 100px;
+  width: 150px;
   height: auto;
   margin: 30px;
   position: relative;
   top: 40px;
-  left: 500px;
+  left: 550px;
 }
 
-.notShrinking {
-  animation: wobble 1s infinite;
+.first {
+  animation: wobble 2s infinite;
+}
+
+.third {
+  width: 150px;
+  height: auto;
+  margin: 30px;
+  position: fixed;
+  top: 40px;
+  right: 0px;
 }
 
 @keyframes move {
@@ -48,10 +57,10 @@ img {
     left: 40px;
   }
   100% {
-    width: 100px;
+    width: 150px;
     padding: 5px;
     position: relative;
     top: 40px;
-    left: 500px;
+    left: 550px;
   }
 }
