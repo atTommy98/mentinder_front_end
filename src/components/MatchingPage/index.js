@@ -3,7 +3,11 @@ import React, { useState } from "react";
 import "./matchingpage.css";
 import TopFiveForm from "../TopFiveForm";
 import Card from "../Card";
+
+import Chris from "../Chris";
+
 import Filter from "../Filter";
+
 
 function Matching({ mentorData, setTopFive, topFive }) {
   const [filter, setFilter] = useState({
@@ -45,9 +49,12 @@ function Matching({ mentorData, setTopFive, topFive }) {
   return (
     <main className="mainMatching">
       <h1 className="matchingPageName">Find a mentor...</h1>
+
+      <Chris />
+      <div>
+
       <div className="filterAndCardContainer">
         <Filter filter={filter} setFilter={setFilter} />
-
         <div className="cards">
           {mentorData.filter(filterObject).map((object, index) => {
             return (
