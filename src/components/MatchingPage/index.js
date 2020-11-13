@@ -8,7 +8,6 @@ import Chris from "../Chris";
 
 import Filter from "../Filter";
 
-
 function Matching({ mentorData, setTopFive, topFive }) {
   const [filter, setFilter] = useState({
     frontend: false,
@@ -51,7 +50,6 @@ function Matching({ mentorData, setTopFive, topFive }) {
       <h1 className="matchingPageName">Find a mentor...</h1>
 
       <Chris />
-      <div>
 
       <div className="filterAndCardContainer">
         <Filter filter={filter} setFilter={setFilter} />
