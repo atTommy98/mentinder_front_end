@@ -9,7 +9,7 @@ function Bootcamper({ bootcamper, setBootcamper }) {
       <article className="bootcamperArticle">
         <h1 className="h1Bootcamper">Why would you want a mentor?</h1>
         <p className="blurb-p">
-          One of the most important skills to learn is building realtionships
+          One of the most important skills to learn is building relationships
           with people in the industry. We will be assigning everyone a mentor
           during the first few weeks of the course and the aim should be to
           organise a 30 minute chat or video call with them every week. These

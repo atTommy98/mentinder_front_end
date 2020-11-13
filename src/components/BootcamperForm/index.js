@@ -44,7 +44,7 @@ function BootcamperForm({ bootcamper, setBootcamper }) {
       <br />
       <input placeholder="E-Mail" id="email"></input>
       <br />
-      <p id="gender">What is your gender?</p>
+      <p id="gender">Gender:</p>
       <select id="gender-list">
         <option value="Female">Female</option>
         <option value="Male">Male</option>

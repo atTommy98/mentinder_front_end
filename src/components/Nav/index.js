@@ -18,7 +18,7 @@ function Nav() {
             activeClassName="activeLink"
             style={{ textDecoration: "none" }}
           >
-            Mentors
+            Mentor Sign-up
           </Link>
         </li>
         <li>
@@ -28,7 +28,7 @@ function Nav() {
             activeClassName="activeLink"
             style={{ textDecoration: "none" }}
           >
-            Bootcampers
+            Bootcamper Sign-up
           </Link>
         </li>
         <li>
@@ -48,7 +48,7 @@ function Nav() {
             activeClassName="activeLink"
             style={{ textDecoration: "none" }}
           >
-            Bootcamper Choices
+            View Bootcampers
           </Link>
         </li>
       </ul>

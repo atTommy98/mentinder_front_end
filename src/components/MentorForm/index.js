@@ -55,7 +55,7 @@ function MentorForm({ mentor, setMentor }) {
         name="imgurl"
       ></input>
       <br />
-      <p>What is your gender?</p>
+      <p>Gender:</p>
       <select id="gender-list">
         <option value="Female">Female</option>
         <option value="Male">Male</option>
