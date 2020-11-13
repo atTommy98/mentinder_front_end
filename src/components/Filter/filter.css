@@ -1,0 +1,35 @@
+.filter-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 5px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+}
+
+.filter-text {
+  font-size: 18px;
+}
+
+.filters-heading {
+  color: #000818;
+  font-size: 35px;
+  margin: 5px;
+  text-decoration: underline;
+  text-decoration-color: #31986a;
+  /* background-color: white; */
+  padding: 5px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.filters-subheading {
+  color: #31986a;
+  font-size: 25px;
+}

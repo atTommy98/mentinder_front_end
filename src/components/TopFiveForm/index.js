@@ -42,21 +42,30 @@ export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
   const [chrisEffect5] = useSound(sweet);
 
   return (
-    <form className="mentorForm" onSubmit={(e) => handleSubmit(e)}>
-      <h2 className="form-title">
+    <form className="topFiveForm" onSubmit={(e) => handleSubmit(e)}>
+      <h2 className="select-form-title">
         Bootcampers, select your top choice mentors...
       </h2>
       <div className="personal-details-container">
-        <input placeholder="Bootcamper first name"></input>
+        <input
+          placeholder="Bootcamper first name"
+          style={{ width: "200px" }}
+        ></input>
         <br />
-        <input placeholder="Bootcamper second name"></input>
+        <input
+          placeholder="Bootcamper second name"
+          style={{ width: "200px" }}
+        ></input>
         <br />
-        <input placeholder="Bootcamper email address"></input>
+        <input
+          placeholder="Bootcamper email address"
+          style={{ width: "400px" }}
+        ></input>
         <br />
       </div>
       <div className="dropdown-container">
         <div>
-          <p>1.</p>
+          <p className="number">1.</p>
           <select
             onChange={() => {
               setTimeout(chrisEffect1, 300);
@@ -75,7 +84,7 @@ export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
           />
         </div>
         <div>
-          <p>2.</p>
+          <p className="number">2.</p>
           <select
             onChange={() => {
               setTimeout(chrisEffect2, 800);
@@ -94,7 +103,7 @@ export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
           />
         </div>
         <div>
-          <p>3.</p>
+          <p className="number">3.</p>
           <select
             onChange={() => {
               setTimeout(chrisEffect4, 800);
@@ -113,7 +122,7 @@ export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
           />
         </div>
         <div>
-          <p>4.</p>
+          <p className="number">4.</p>
           <select
             onChange={() => {
               setTimeout(chrisEffect5, 800);
@@ -132,7 +141,7 @@ export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
           />
         </div>
         <div>
-          <p>5.</p>
+          <p className="number">5.</p>
           <select
             onChange={() => {
               setTimeout(chrisEffect3, 800);
@@ -150,7 +159,9 @@ export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
             src="/chris-hat3.png"
           />
         </div>
-        <input type="submit" value="Submit"></input>
+        <input type="submit"
+          value="SUBMIT"
+          className="choiceSubmitButton"></input>
       </div>
     </form>
   );
