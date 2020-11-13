@@ -12,6 +12,7 @@ function Homepage() {
       <Button path={"/mentor"} buttonText={"Sign up to be a mentor"} />
       <Button path={"/bootcamper"} buttonText={"Sign up as a bootcamper"} />
       <Button path={"/match"} buttonText={"Find a mentor"} />
+      <Button path={"/choices"} buttonText={"View Bootcamper Choices"} />
     </main>
   );
 }

@@ -5,9 +5,9 @@ function Flair({ expertise }) {
   function nameClass(expertise) {
     if (
       expertise === "foodanddrink" ||
-      expertise === "sportandfitness" ||
       expertise === "gaming" ||
       expertise === "music" ||
+      expertise === "sportandfitness" ||
       expertise === "reading" ||
       expertise === "films"
     ) {

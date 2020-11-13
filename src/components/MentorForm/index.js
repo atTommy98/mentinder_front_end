@@ -3,7 +3,6 @@ import "./mentorform.css";
 
 function MentorForm({ mentor, setMentor }) {
   function handleSubmit(event) {
-    event.preventDefault()
     console.log(event);
     setMentor({
       firstname: event.target[0].value,
@@ -49,8 +48,12 @@ function MentorForm({ mentor, setMentor }) {
       <input placeholder="Company" id="company"></input>
       <br />
       <input placeholder="Job" id="job"></input>
-      <br/>
-      <input placeholder="Enter an image URL location" id="imgurl" name="imgurl"></input>
+      <br />
+      <input
+        placeholder="Enter an image URL location"
+        id="imgurl"
+        name="imgurl"
+      ></input>
       <br />
       <p>What is your gender?</p>
       <select id="gender-list">

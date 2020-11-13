@@ -5,10 +5,12 @@ import Homepage from "../Homepage";
 import Mentor from "../MentorPage";
 import Bootcamper from "../BootcamperPage";
 import Matching from "../MatchingPage";
+import ShowTop5 from "../ChoicesPage";
 import Nav from "../Nav";
 
 function App() {
   const [mentorData, setMentorData] = useState([]);
+  const [bootcamperData, setBootcamperData] = useState([]);
   const [topFive, setTopFive] = useState({
     firstname: "",
     lastname: "",
@@ -125,6 +127,19 @@ function App() {
   }, []);
 
   useEffect(() => {
+    async function getAllBootcampers() {
+      const res = await fetch(
+        "http://localhost:5000/mentorsAndBootcampers/bootcampers"
+      );
+      const object = await res.json();
+      const data = object.payload.rows;
+      setBootcamperData(data);
+    }
+    console.log(bootcamperData);
+    getAllBootcampers();
+  }, []);
+
+  useEffect(() => {
     async function postTopFiveData(formData) {
       console.log(formData);
       const res = await fetch("http://localhost:5000/mentorsAndBootcampers", {
@@ -149,11 +164,18 @@ function App() {
         </header>
 
         <Switch>
+          <Route path="/choices">
+            <ShowTop5 bootcamperData={bootcamperData} />
+          </Route>
           <Route path="/mentor">
             <Mentor setMentor={setMentor} mentor={mentor} />
           </Route>
           <Route path="/match">
-            <Matching mentorData={mentorData} setTopFive={setTopFive} topFive={topFive}/>
+            <Matching
+              mentorData={mentorData}
+              setTopFive={setTopFive}
+              topFive={topFive}
+            />
           </Route>
           <Route path="/bootcamper">
             <Bootcamper setBootcamper={setBootcamper} bootcamper={bootcamper} />
