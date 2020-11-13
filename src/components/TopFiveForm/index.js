@@ -15,7 +15,12 @@ const initialChrisState = {
   chris5: false,
 };
 
-export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
+export default function TopFiveForm({
+  setHideChris,
+  topFive,
+  setTopFive,
+  mentorData,
+}) {
   const [showChris, setShowChris] = useState(initialChrisState);
 
   function handleSubmit(e) {
@@ -70,6 +75,7 @@ export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
             onChange={() => {
               setTimeout(chrisEffect1, 300);
               toggleShowChris("chris1");
+              setHideChris(true);
             }}
             id="mentor-choice1"
           >
@@ -159,9 +165,11 @@ export default function TopFiveForm({ topFive, setTopFive, mentorData }) {
             src="/chris-hat3.png"
           />
         </div>
-        <input type="submit"
+        <input
+          type="submit"
           value="SUBMIT"
-          className="choiceSubmitButton"></input>
+          className="choiceSubmitButton"
+        ></input>
       </div>
     </form>
   );
