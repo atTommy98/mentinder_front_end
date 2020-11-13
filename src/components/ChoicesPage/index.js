@@ -8,7 +8,7 @@ function ShowTop5({ bootcamperData }) {
   console.log(bootcamperData);
   return (
     <main className="mainChoices">
-      <h1 className="choicesPageName">View Bootcamper Choices</h1>
+      <h1 className="choicesPageName">Bootcampers 4.0</h1>
       <div>
         <div className="choices-cards">
           {bootcamperData.map((object, index) => {
