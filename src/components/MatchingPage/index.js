@@ -52,7 +52,7 @@ function Matching({ mentorData, setTopFive, topFive }) {
       <Chris />
 
       <div className="filterAndCardContainer">
-        <Filter filter={filter} setFilter={setFilter} />
+        <div className="invisibleColumn"></div>
         <div className="cards">
           {mentorData.filter(filterObject).map((object, index) => {
             return (
@@ -62,6 +62,7 @@ function Matching({ mentorData, setTopFive, topFive }) {
             );
           })}
         </div>
+        <Filter filter={filter} setFilter={setFilter} />
       </div>
       <TopFiveForm
         setTopFive={setTopFive}
