@@ -30,6 +30,7 @@
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .choice-card-front {
@@ -45,12 +46,6 @@
   justify-content: center;
   align-items: center;
 }
-/* 
-#profile-image {
-  height: 300px;
-  width: 350px;
-  object-fit: cover;
-} */
 
 .choice-card-body {
   padding: 0px 10px 0px;
@@ -63,13 +58,6 @@
   color: white;
   padding-top: 10px;
 }
-
-/* .choice-card-subtitle {
-  margin-top: 5px;
-  color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 5px;
-  color: white;
-} */
 
 .choice-card-text {
   margin: 5px;
@@ -87,7 +75,7 @@
   flex-wrap: wrap;
 }
 
-.choices-grid {
+.choices-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
