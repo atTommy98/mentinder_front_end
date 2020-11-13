@@ -7,6 +7,7 @@ export default function Card({ object }) {
 
   useEffect(() => {
     function formatPerson(object) {
+      console.log(object);
       const array = Object.entries(object);
       let expertiseData = [];
       array.forEach((item) => {
@@ -33,12 +34,10 @@ export default function Card({ object }) {
           </div>
           <div className="card-body">
             <h5 className="card-title">
-              <b>
-                {object.firstname} {object.lastname}
-              </b>
+              {object.firstname} {object.lastname}
             </h5>
             <h4 className="card-subtitle">{object.company}</h4>
-            <p>{object.job}</p>
+            <p class="jobTitle">{object.job}</p>
             <div className="flair-grid">
               {expertise.map((item) => {
                 return <Flair expertise={item} />;
@@ -49,10 +48,10 @@ export default function Card({ object }) {
 
         <div className="card-back">
           <div className="card-text">
-            <h3>Bio</h3>
-            <p>{object.bio}</p>
-
-            <h4>{object.email}</h4>
+            <h3 className="card-subtitle">Bio</h3>
+            <p class="backText">{object.bio}</p>
+            <h3 className="card-subtitle">Contact</h3>
+            <h4 class="backText">{object.email}</h4>
           </div>
         </div>
       </div>
