@@ -3,7 +3,7 @@ import "./Chris.css";
 import useSound from "use-sound";
 import mentors from "./mentors-[AudioTrimmer.com] (1).mp3";
 
-function Chris() {
+function Chris({ hideChris }) {
   const [isShrinking, setIsShrinking] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
 
@@ -17,15 +17,20 @@ function Chris() {
     setTimeout(() => {
       setIsFixed(true);
     }, 6000);
-  }, []);
+  }, [mentorsSound]);
 
   return (
     <div>
-      <img
-        id={isFixed ? "fixed" : ""}
-        className={isShrinking ? "second" : "first"}
-        src="/chris-hat3.png"
-      />
+      {hideChris ? (
+        <br></br>
+      ) : (
+        <img
+          id={isFixed ? "fixed" : ""}
+          className={isShrinking ? "second" : "first"}
+          src="/chris-hat3.png"
+          alt="Chris with a sorting hat"
+        />
+      )}
     </div>
   );
 }

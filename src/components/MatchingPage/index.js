@@ -29,6 +29,7 @@ function Matching({ mentorData, setTopFive, topFive }) {
     reading: false,
     films: false,
   });
+  const [hideChris, setHideChris] = useState(false);
 
   const filterArray = Object.entries(filter)
     .filter((item) => {
@@ -49,7 +50,7 @@ function Matching({ mentorData, setTopFive, topFive }) {
     <main className="mainMatching">
       <h1 className="matchingPageName">Find a mentor...</h1>
 
-      <Chris />
+      <Chris hideChris={hideChris} />
 
       <div className="filterAndCardContainer">
         <div className="invisibleColumn"></div>
@@ -68,6 +69,7 @@ function Matching({ mentorData, setTopFive, topFive }) {
         setTopFive={setTopFive}
         topFive={topFive}
         mentorData={mentorData}
+        setHideChris={setHideChris}
       />
     </main>
   );
