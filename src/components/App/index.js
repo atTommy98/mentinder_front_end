@@ -8,6 +8,8 @@ import Matching from "../MatchingPage";
 import ShowTop5 from "../ChoicesPage";
 import Nav from "../Nav";
 
+const url = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+
 function App() {
   const [mentorData, setMentorData] = useState([]);
   const [bootcamperData, setBootcamperData] = useState([]);
@@ -83,7 +85,7 @@ function App() {
     console.log("bootcamper useEffect in process");
     async function postBootcamperData(bootcamper) {
       console.log(bootcamper);
-      const res = await fetch("http://localhost:5000/mentorsAndBootcampers", {
+      const res = await fetch(`${url}/mentorsAndBootcampers`, {
         method: "POST",
         headers: { "content-type": "application/JSON" },
         body: JSON.stringify(bootcamper),
@@ -100,7 +102,7 @@ function App() {
     console.log("mentor useEffect in process");
     async function postMentorData(mentor) {
       console.log(mentor);
-      const res = await fetch("http://localhost:5000/mentorsAndBootcampers", {
+      const res = await fetch(`${url}/mentorsAndBootcampers`, {
         method: "POST",
         headers: { "content-type": "application/JSON" },
         body: JSON.stringify(mentor),
@@ -115,9 +117,7 @@ function App() {
 
   useEffect(() => {
     async function getAllMentors() {
-      const res = await fetch(
-        "http://localhost:5000/mentorsAndBootcampers/mentors"
-      );
+      const res = await fetch(`${url}/mentorsAndBootcampers/mentors`);
       const object = await res.json();
       const data = object.payload.rows;
       setMentorData(data);
@@ -128,9 +128,7 @@ function App() {
 
   useEffect(() => {
     async function getAllBootcampers() {
-      const res = await fetch(
-        "http://localhost:5000/mentorsAndBootcampers/bootcampers"
-      );
+      const res = await fetch(`${url}/mentorsAndBootcampers/bootcampers`);
       const object = await res.json();
       const data = object.payload.rows;
       setBootcamperData(data);
@@ -142,7 +140,7 @@ function App() {
   useEffect(() => {
     async function postTopFiveData(formData) {
       console.log(formData);
-      const res = await fetch("http://localhost:5000/mentorsAndBootcampers", {
+      const res = await fetch(`${url}/mentorsAndBootcampers`, {
         method: "PATCH",
         headers: { "content-type": "application/JSON" },
         body: JSON.stringify(formData),
