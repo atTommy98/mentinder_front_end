@@ -37,7 +37,7 @@ export default function Card({ object }) {
               {object.firstname} {object.lastname}
             </h5>
             <h4 className="card-subtitle">{object.company}</h4>
-            <p class="jobTitle">{object.job}</p>
+            <p className="jobTitle">{object.job}</p>
             <div className="flair-grid">
               {expertise.map((item) => {
                 return <Flair expertise={item} />;
@@ -49,9 +49,9 @@ export default function Card({ object }) {
         <div className="card-back">
           <div className="card-text">
             <h3 className="card-subtitle">Bio</h3>
-            <p class="backText">{object.bio}</p>
+            <p className="backText">{object.bio}</p>
             <h3 className="card-subtitle">Contact</h3>
-            <h4 class="backText">{object.email}</h4>
+            <h4 className="backText">{object.email}</h4>
           </div>
         </div>
       </div>

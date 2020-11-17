@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Homepage from "../Homepage";
 import Mentor from "../MentorPage";
 import Bootcamper from "../BootcamperPage";
