@@ -157,7 +157,7 @@ function App() {
     <Router>
       <div className="App">
         <header>
-          <img id="soc-logo" src="/socLogo.png"></img>
+          <img id="soc-logo" src="/socLogo.png" alt='logo'></img>
           <Nav />
         </header>
 
